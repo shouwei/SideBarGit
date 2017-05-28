@@ -755,7 +755,7 @@ class SideBarGitPushTagsCommand(sublime_plugin.WindowCommand):
 		return SideBarSelection(paths).len() > 0
 
 class SideBarGitPullCommand(sublime_plugin.WindowCommand):
-	def run(self, paths = [], confirm = False, drop_me = ''):
+	def run(self, paths = [], confirm = True, drop_me = ''):
 		if confirm == False:
 			SideBarGit().confirm('Pull from default? ', self.run, paths)
 		else:
